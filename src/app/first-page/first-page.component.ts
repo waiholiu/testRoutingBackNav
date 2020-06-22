@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-first-page',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirstPageComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit(): void {
+  constructor(private route : ActivatedRoute) { 
+
+    this.countArray = Array(100).fill(0).map((x,i)=>i);
+
   }
+
+  countArray;
+
+  ngOnInit() {
+
+    this.countArray = Array(100).fill(0).map((x,i)=>i);
+    // this.route.queryParams
+    //   .subscribe((params) => {
+
+
+    //     this.countArray = Array(100).fill(0).map((x,i)=>i);
+    //   });
+
+  }
+
 
 }
