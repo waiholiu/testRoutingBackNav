@@ -1,3 +1,25 @@
+# Propose   
+
+I had a page where I had a series of mat-expansion-panels that had links inside. 
+When I clicked on the link to go to another page and then hit the back button, it wouldn't remember the scroll position.
+
+This solution fixes it by
+- creating a service to keep state
+- when clicked it would set the open expansion panel as well as the scroll position of the link
+- when i click the back button, it would go back to the page and check the service for the state data
+- it would open the expansion open that was last opened and then navigate to the link position
+
+
+note - i had to save the link position because scrollIntoView didn't quite work with expansion-panels.
+
+
+
+
+
+
+
+
+
 # TestRoutingBackNav
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
